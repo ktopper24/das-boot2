@@ -5,6 +5,7 @@
  */
 package com.boot.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,9 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @author ktopper3
  */
 @RestController
+@CrossOrigin(origins = "*")
 public class HomeController {
     @RequestMapping("/")
     public String home() {
-        return "Das Bot, reporting for duty!";
+        return "Das Boot, reporting for duty!";
     }
 }
